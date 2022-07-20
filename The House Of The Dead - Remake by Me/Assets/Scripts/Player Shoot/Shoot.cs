@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     [SerializeField] LayerMask enemyMask;
+    [SerializeField] EnemyCountHandler countHandler;
 
     void Update()
     {
@@ -31,7 +32,9 @@ public class Shoot : MonoBehaviour
         if (isHit && Input.GetMouseButtonDown(0))
         {
             // take damage
-            Destroy(hit.transform.gameObject);        
+            Destroy(hit.transform.gameObject);
+            countHandler.killCount++;
+            countHandler.totalKill++;
         }
     }
 }
