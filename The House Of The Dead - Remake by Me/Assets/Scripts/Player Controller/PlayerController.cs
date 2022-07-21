@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Waypoint")
         {
             canMove = false;
-            //other.GetComponent<BoxCollider>().enabled = false;
+            other.GetComponent<BoxCollider>().enabled = false;
         }    
     }
 

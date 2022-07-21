@@ -29,9 +29,7 @@ public class EnemyCountHandler : MonoBehaviour
         if (killCount == targetKill)
         {
             controller.canMove = true;
-            targetKill = 0;
+            killCount = 0;
         }
     }
-
-
 }
